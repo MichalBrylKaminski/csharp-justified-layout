@@ -1,4 +1,5 @@
 using JustifiedLayout;
+using JustifiedLayout.Helpers;
 using JustifiedLayout.Models;
 
 namespace JustifiedLayoutTests;
@@ -18,7 +19,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 1, 2 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes[0].Top, Is.EqualTo(10));
         Assert.That(geometry.Boxes[1].Top, Is.EqualTo(200));
@@ -37,7 +38,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 1, 2, 1 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(2));
     }
@@ -49,7 +50,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 5 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(1));
     }
@@ -66,7 +67,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 1, 4, 1.1 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes[0].Height, Is.EqualTo(194));
         Assert.That(geometry.Boxes[1].Height, Is.EqualTo(194));
@@ -86,7 +87,7 @@ public class JustifiedLayoutTests
             (700, 700)
         };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(4));
     }
@@ -98,7 +99,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 1, 1, 1, 1 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(4));
     }
@@ -113,7 +114,7 @@ public class JustifiedLayoutTests
             new Item { Width = 10 }
         };
 
-        Assert.Throws<ArgumentException>(() => LayoutHelper.ComputeLayout(layoutConfig, layoutData, input));
+        Assert.Throws<ArgumentException>(() => JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, input));
     }
 
     [Test]
@@ -121,7 +122,7 @@ public class JustifiedLayoutTests
     {
         var input = new List<double> { 1, 1, 1, 1 };
 
-        var geometry = LayoutHelper.ComputeLayout(new LayoutConfig(), new LayoutData(), ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(new LayoutConfig(), new LayoutData(), ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(4));
     }
@@ -137,7 +138,7 @@ public class JustifiedLayoutTests
         var layoutData = new LayoutData();
         var input = new List<double> { 1, 1, 1, 1 };
 
-        var geometry = LayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
+        var geometry = JustifiedLayoutHelper.ComputeLayout(layoutConfig, layoutData, ConvertInputToItems(input));
 
         Assert.That(geometry.Boxes.Count, Is.EqualTo(4));
     }

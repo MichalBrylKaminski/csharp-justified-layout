@@ -1,8 +1,8 @@
 ﻿using JustifiedLayout.Models;
 
-namespace JustifiedLayout;
+namespace JustifiedLayout.Helpers;
 
-public static class LayoutHelper
+public static class JustifiedLayoutHelper
 {
     /// <summary>
     /// Calculate the current layout for all items in the list that require layout.
