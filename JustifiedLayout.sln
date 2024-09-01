@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5985898-F20C-4416-90C4-C2DDB82F1A49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{931AD8D5-12B1-41C6-B868-6C2E2E7488F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustifiedLayout", "src\JustifiedLayout\JustifiedLayout.csproj", "{91EC34CE-BB60-47A9-8E5F-B2442FE48F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustifiedLayoutTests", "tests\JustifiedLayoutTests\JustifiedLayoutTests.csproj", "{90FA2143-456F-4CD4-99E1-853F9D70E5EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91EC34CE-BB60-47A9-8E5F-B2442FE48F14} = {C5985898-F20C-4416-90C4-C2DDB82F1A49}
+		{90FA2143-456F-4CD4-99E1-853F9D70E5EB} = {931AD8D5-12B1-41C6-B868-6C2E2E7488F0}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91EC34CE-BB60-47A9-8E5F-B2442FE48F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EC34CE-BB60-47A9-8E5F-B2442FE48F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EC34CE-BB60-47A9-8E5F-B2442FE48F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EC34CE-BB60-47A9-8E5F-B2442FE48F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FA2143-456F-4CD4-99E1-853F9D70E5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FA2143-456F-4CD4-99E1-853F9D70E5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FA2143-456F-4CD4-99E1-853F9D70E5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FA2143-456F-4CD4-99E1-853F9D70E5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
